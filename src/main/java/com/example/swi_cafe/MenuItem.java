@@ -11,6 +11,10 @@ public class MenuItem {
     private String nazev;
     private double cena;
 
+    @ManyToOne
+    @JoinColumn(name = "category_id") // This creates the column in your DB
+    private Category category;
+
     public MenuItem() {
     }
     public MenuItem(String nazev, double cena) {
@@ -21,6 +25,9 @@ public class MenuItem {
     public Long getId() {
         return id;
     }
+    public Category getCategory() { return category; }
+    public void setCategory(Category category) { this.category = category; }
+
 
     public void setId(Long id) {
         this.id = id;
