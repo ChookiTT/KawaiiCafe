@@ -12,7 +12,7 @@ public class MenuItem {
     private double cena;
 
     @ManyToOne
-    @JoinColumn(name = "category_id") // This creates the column in your DB
+    @JoinColumn(name = "category_id")
     private Category category;
 
     public MenuItem() {

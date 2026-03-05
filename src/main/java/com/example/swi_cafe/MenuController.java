@@ -18,14 +18,6 @@ import java.util.List;
         { return menuRepository.findAll();
         }
 
-    @Autowired
-    private CategoryRepository categoryRepository;
-
-    @GetMapping("/categories")
-    public List<Category> getCategories() {
-        return categoryRepository.findAll();
-    }
-
 
     }
 
