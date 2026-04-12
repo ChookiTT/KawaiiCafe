@@ -1,45 +1,40 @@
 package com.example.swi_cafe;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import org.hibernate.annotations.UuidGenerator;
+import org.hibernate.cache.spi.support.AbstractReadWriteAccess;
 
 import java.util.ArrayList;
 import java.util.List;
 
+
 @Entity
-@Table(name = "menu")
-public class MenuItem {
+@Table(name = "Cafe_Order")
+public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nazev;
     private double cena;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "category_id")
-    private Category category;
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+        @JoinTable( name = "order_menu",
+            joinColumns = @JoinColumn(name = "order_id"),
+            inverseJoinColumns = @JoinColumn(name = "item_id")
 
-    @JsonIgnore
-    @ManyToMany(mappedBy = "items")
-    private List<Order> orders = new ArrayList<>();
+    )
+    private List<MenuItem> items = new ArrayList<>();
+    public Order() {}
 
-    @JsonIgnore
-    @ManyToMany(mappedBy = "items")
-    private List<Alergens> alergens = new ArrayList<>();
-
-    public MenuItem() {
-    }
-    public MenuItem(String nazev, double cena) {
-        this.nazev = nazev;
+    public Order(Long id, double cena, String nazev) {
+        this.id = id;
         this.cena = cena;
+        this.nazev = nazev;
     }
 
     public Long getId() {
         return id;
     }
-    public Category getCategory() { return category; }
-    public void setCategory(Category category) { this.category = category; }
-
 
     public void setId(Long id) {
         this.id = id;
