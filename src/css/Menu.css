@@ -1,0 +1,60 @@
+h1{
+  font-family: PoppinsBold, sans-serif;
+    color: #443025;
+    align-self: center;
+}
+.category-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 26px;
+    background: #443025;
+    height: 60px;
+
+}
+
+.menu{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+
+}
+
+.item-name-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0);
+    padding: 10px 20px;
+    border-radius: 20px;
+
+}
+
+strong{
+    font-family: PoppinsBold, sans-serif;
+    color: #443025;
+    align-self: center;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+.item-info{
+    font-size: 20px;
+    font-family: Poppins, sans-serif;
+    font-weight: bold;
+    color: #443025;
+
+}
+
+.back-btn{
+    align-self: center;
+    border:none;
+    border-radius: 10px;
+    margin-bottom:20px ;
+}
+.back-btn:hover{
+    transition: background 0.3s;
+    background: #7F5836;
+    transform: scale(1.0);
+}

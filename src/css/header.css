@@ -1,0 +1,109 @@
+
+.kawaiiCafe{
+    font-family:CarryU, sans-serif;
+    color:#443025;
+    background: rgba(0, 128, 0, 0);
+    border: none;
+    flex:0;
+    padding:0;
+    text-align: center;
+    font-weight:normal ;
+    font-size: 40px;
+    margin-top: 0;
+
+
+}
+.kawaiiCafe:hover{
+    background: rgba(0, 128, 0, 0);
+    border:none;
+    cursor:default;
+    transform: scale(1);
+
+}
+h2{
+    font-family:PoppinsBold,sans-serif;
+    font-size:20px;
+    font-weight:bold;
+}
+.topBox{
+
+    background-color: #d0ad8a;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+
+
+}
+.cart-icon{
+    width:auto;
+    height:26px;
+    border-radius:0;
+
+
+}
+.cart-badge{
+    font-family: PoppinsBold,sans-serif;
+    font-size:15px;
+    color: black;
+
+
+}
+.cartButton{
+    border-radius:0;
+    background:rgba(0, 128, 0, 0);
+    padding:0;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+
+
+}
+.cartButton:hover{
+    border-radius: 0;
+    transform: scale(1);
+    background: rgba(0, 128, 0, 0);
+
+
+}
+.topRight{
+    display: flex;
+    margin-left:auto;
+    margin-right:10px;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+
+}
+.userButtons button{
+    color : #443025;
+    background: rgba(0, 128, 0, 0);
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family:Poppins, sans-serif;
+    font-weight:bold;
+    font-size: 20px;
+    transform: scale(1);
+
+}
+.userButtons{
+    display: flex;
+    padding-top: 10px;
+    margin-left:auto;
+    justify-content: space-between;
+    gap: 10px;
+
+}
+.userButtons button:hover{
+    color: #7F5836;
+    cursor: pointer;
+}
+
+
+.user-icon{
+    width:25px;
+    height:auto;
+    border-radius:0;
+    align-self: center;
+}

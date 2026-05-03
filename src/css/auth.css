@@ -1,0 +1,48 @@
+input{
+    background-color: lightgray;
+    color: #443025;
+    font-family:PoppinsBold, sans-serif;
+    border-radius: 10px;
+    width: 50%;
+    border: 1px solid #443025;
+
+    height: 50px;
+}
+input:focus{
+    outline: 1px solid #443025;
+
+}
+
+.authBox{
+    background-color: #f2cfcb;
+    width: 100%;
+    min-height: 100vh;
+
+}
+.inputBox{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+p{
+    font-family: PoppinsBold, sans-serif;
+    color: #443025;
+    font-size: 17px;
+    margin: 20px 0;
+}
+.log-btn{
+    transform: scale(1.5);
+    margin-top: 30px;
+    border-radius:10px;
+}
+.log-btn:hover{
+    transform: scale(1.5);
+    transition: 0.3s;
+    background-color: #7F5836;
+}

@@ -1,0 +1,52 @@
+footer {
+    background-color: #d0ad8a;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 2%;
+
+}
+.foot-message{
+    color: #443025;
+    padding-top:12px ;
+    font-family: CarryU, sans-serif;
+    font-size: 30px;
+    text-align: right;
+    margin-right: 10px;
+
+}
+.foot-contact{
+    color: #443025;
+    font-family: CarryU, sans-serif;
+    font-size: 28px;
+    text-align: left;
+    margin-left: 10px;
+    display: flex;
+    gap: 29px;
+    justify-content: left;
+    padding-top:12px ;
+
+}
+.phone{
+    font-size: 25px;
+    font-weight: bold;
+    align-self: center;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.email{
+    font-size: 28px;
+
+    align-self: center;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.icons{
+    display: flex;
+    height: 20px;
+    width: auto;
+    border-radius:0;
+
+}

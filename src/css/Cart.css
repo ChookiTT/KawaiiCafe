@@ -1,0 +1,106 @@
+
+.cart-container {
+    padding: 20px;
+    max-width: 100%;
+    margin: 10px auto;
+    min-width: 65%;
+    background-color: #d0ad8a;
+    border-radius: 0;
+}
+.logo-text{
+    color: #443025;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family:PoppinsBold,sans-serif;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 3px 3px rgba(68, 48, 37, 0.3);
+    border-radius: 10px;
+    border-left: 5px solid #443025;
+}
+
+
+.item-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 0;
+    flex-grow:1;
+
+}
+
+.item-name {
+    color:#443025;
+    font-family: Poppins, sans-serif;
+    font-weight: bold;
+    font-size:1.5rem;
+    margin-right: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 90%;
+    flex-shrink: 1;
+}
+.item-controls {
+    color:#443025;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    white-space: nowrap;
+    font-size: 15px;
+    font-family: PoppinsBold,sans-serif;
+    align-items: end;
+}
+.item-price {
+    color:#443025;
+    flex-shrink: 0;
+    font-family: PoppinsBold, sans-serif;
+    font-weight: bold;
+    font-size:1rem;
+    white-space: nowrap;
+}
+.cart-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin:0;
+    padding: 0;
+}
+
+
+.delete-btn {
+    background: none;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+}
+.delete-btn-img{
+    width: 25px;
+    height: 25px;
+    border-radius: 0;
+    object-fit: contain;
+}
+.delete-btn:hover {
+    background-color: rgba(0, 128, 0, 0);
+    transform: scale(1);
+
+}
+.cart-summary{
+    color: #443025;
+    font-family: PoppinsBold, sans-serif;
+    font-size: 30px;
+}

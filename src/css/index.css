@@ -1,0 +1,76 @@
+:root {
+  margin: 0;
+  padding: 0;
+
+}
+
+@font-face {
+  font-family: 'CarryU';
+  src: url(fonts/carry-you.regular.ttf) format('truetype');
+
+}
+@font-face {
+  font-family:"poppins" ;
+  src: url(fonts/Poppins-ThinItalic.ttf) format('truetype');
+}
+@font-face {
+  font-family:"poppinsBold" ;
+  src: url(fonts/Poppins-Italic.ttf) format('truetype');
+}
+
+.WholePage{
+  width: 100%;
+  position: absolute;
+  left:0;
+  top:0;
+  margin: 0;
+  padding: 0;
+}
+html,body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+  overflow-y: auto;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+
+button{
+  background-color:#443025;
+  border:none;
+  color: antiquewhite;
+  font-family:poppins, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+}
+button:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.mainButton {
+  position: absolute;
+  margin:0;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+}
+.home-screen {
+  background-color: #b08c69;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+

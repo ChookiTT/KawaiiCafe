@@ -1,0 +1,26 @@
+.menu-img-container {
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+    margin-right: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.menu-item-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.item-image-container {
+    width: 100%;
+    height: 200px;
+    object-fit:cover;
+}
+img{
+    border-radius: 10px;
+}
+.item-image-container :hover{
+   transform: scale(1.02);
+    cursor: pointer;
+}
