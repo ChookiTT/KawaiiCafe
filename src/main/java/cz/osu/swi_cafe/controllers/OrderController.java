@@ -1,23 +1,23 @@
 package cz.osu.swi_cafe.controllers;
 
-import cz.osu.swi_cafe.repos.OrderRepository;
+import cz.osu.swi_cafe.services.OrderService;
 import cz.osu.swi_cafe.tables.Order;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/Orders")
+@CrossOrigin(origins = "*" ,allowedHeaders= "*" )
 public class OrderController {
     @Autowired
-    private OrderRepository orderRepository;
+    private OrderService orderService;
 
-    @GetMapping
-    public List<Order> getAllOrders() {
-        return orderRepository.findAll();
+    @PostMapping("/create")
+    public ResponseEntity<?> createOrder(@RequestBody Order orderFromReact) {
+
+     orderService.placeOrder(orderFromReact);
+
+        return ResponseEntity.ok("Objednávka byla úspěšně vytvořena.");
     }
 }

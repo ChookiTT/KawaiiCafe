@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,15 +22,19 @@ public class Order {
     private Long orderId;
     private String orderNote;
     private double orderPrice;
-    private LocalDateTime orderDate;
+    private LocalDateTime orderDate = LocalDateTime.now();
 
 
-    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @ManyToMany(cascade = {CascadeType.MERGE})
         @JoinTable( name = "order_menu",
-            joinColumns = @JoinColumn(name = "order_id"),
+            joinColumns = @JoinColumn(name = "order_id",nullable = false),
             inverseJoinColumns = @JoinColumn(name = "item_id")
 
     )
     private List<MenuItem> items = new ArrayList<>();
+
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH})
+    @JoinColumn(name = "user_id")
+    private User user;
 
 }

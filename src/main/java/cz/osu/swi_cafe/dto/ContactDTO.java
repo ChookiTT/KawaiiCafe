@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 
 public class ContactDTO {
-    private Long contactId;
     private String email;
     private String phoneNumber;
 }

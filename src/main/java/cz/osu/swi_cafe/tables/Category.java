@@ -1,8 +1,8 @@
 package cz.osu.swi_cafe.tables;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import java.util.List;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,7 +10,7 @@ import lombok.Setter;
 
 
 @Entity
-    @Table(name = "categories")
+@Table(name = "categories")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -21,9 +21,14 @@ import lombok.Setter;
         private Long categoryId;
         private String categoryName;
 
-        @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
-        @JsonIgnore
+        @ManyToMany(mappedBy = "categories", cascade = CascadeType.ALL)
+        @JsonBackReference
         private List<MenuItem> items;
 
+    public Category(String categoryName, List<MenuItem> items) {
+        this.categoryName = categoryName;
+        this.items = items;
     }
+
+}
 
