@@ -49,6 +49,7 @@ strong{
 
 .back-btn{
     align-self: center;
+    display: flex;
     border:none;
     border-radius: 10px;
     margin-bottom:20px ;

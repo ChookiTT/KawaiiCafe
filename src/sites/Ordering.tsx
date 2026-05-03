@@ -48,7 +48,7 @@ const Ordering: React.FC<OrderingProps> = ({ setPage, handleSave,handleChange,se
             if (response.ok) {
                 setCartItems([]);
                 localStorage.removeItem('cart');
-                alert('Objednávka byla úspěšně odeslána! ✨');
+                alert('Objednávka byla úspěšně odeslána');
                 setPage('menu');
             }
             else {

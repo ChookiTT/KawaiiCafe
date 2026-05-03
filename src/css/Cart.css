@@ -6,6 +6,10 @@
     min-width: 65%;
     background-color: #d0ad8a;
     border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .logo-text{
     color: #443025;
@@ -103,4 +107,5 @@
     color: #443025;
     font-family: PoppinsBold, sans-serif;
     font-size: 30px;
+
 }

@@ -26,7 +26,6 @@
 }
 
 .order-screen{
-
     background-color: #d0ad8a;
     position: absolute;
     align-items: center;
@@ -41,6 +40,14 @@
     display: flex;
     flex-direction: column;
 }
+.checkout-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .checkout-input{
     margin-top: 25px;
+    min-width: 500px;
+
+
 }

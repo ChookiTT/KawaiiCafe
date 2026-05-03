@@ -35,14 +35,27 @@ p{
     color: #443025;
     font-size: 17px;
     margin: 20px 0;
+    text-align: center;
+    align-self: center;
 }
 .log-btn{
     transform: scale(1.5);
     margin-top: 30px;
     border-radius:10px;
+    align-self: center;
 }
 .log-btn:hover{
     transform: scale(1.5);
     transition: 0.3s;
     background-color: #7F5836;
+}
+.actionButtons{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+
+}
+.up-cont{
+    display: flex;
+    justify-content: center;
 }

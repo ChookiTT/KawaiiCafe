@@ -176,7 +176,7 @@ export default function Profile({ currentUser,tempUser, setPage,handleChange,han
                                     />
                                 </div>
 
-                    <button  className={'back-btn'} style={{marginTop: '20px'}} onClick={() => setPage('menu')}>
+                    <button  className={'back-btn-profile'} onClick={() => setPage('menu')}>
                         Zpět na menu
                     </button>
                 </div>

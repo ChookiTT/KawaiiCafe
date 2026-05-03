@@ -52,10 +52,11 @@ export default function Auth({ mode, setPage,setUser }: AuthProps) {
 
     return (
         <div className="home-screen">
+            <div className="up-cont">
             <h3>
                 {mode === 'login' ? 'Přihlášení' : 'Registrace'}
             </h3>
-
+            </div>
             <div className="inputBox">
                 <input
                     type="text"

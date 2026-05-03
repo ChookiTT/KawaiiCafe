@@ -33,7 +33,7 @@ const Cart: React.FC<CartProps> = ({ setPage ,cartItems,removeFromCart}) => {
                                     {item.qty} ks
                                 </span>
                                 <button  className={'delete-btn'} onClick={() => removeFromCart(item.item.itemId)} title="Odstranit z košíku">
-                                    <img  className={'delete-btn-img'} alt={'odstranit'} src='/public/bin.png'></img>
+                                    <img  className={'delete-btn-img'} alt={'odstranit'} src='public/bin.png'></img>
                                 </button>
                             </div>
                         </div>
