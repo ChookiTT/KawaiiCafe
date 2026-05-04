@@ -9,7 +9,7 @@ interface AuthProps {
 
 export default function Auth({ mode, setPage,setUser }: AuthProps) {
     const [userData, setUserData] = useState<User>({
-        userId:0,
+
         firstName: '',
         lastName: '',
         username: '',

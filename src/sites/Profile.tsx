@@ -63,15 +63,7 @@ export default function Profile({ currentUser,tempUser, setPage,handleChange,han
 
                 <div className="profile-info">
                     <div className='individual'>
-                        <EditableRow
-                            label={"Username:"}
-                            id="username"
-                            value={tempUser?.username|| ''}
-                            isEditing={editingField === 'username'}
-                            onEdit={() => setEditingField('username')}
-                            onSave={() => handleSave()}
-                            onChange={(val) => handleChange('main', 'username', val)}
-                        />
+                        <strong>Username: </strong>{tempUser?.username || ''}
                     </div>
                     <div className='individual'>
                         {editingField === 'name' ? (

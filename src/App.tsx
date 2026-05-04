@@ -78,7 +78,7 @@ function App() {
     const handleSave = async () => {
         console.log("data",JSON.stringify(tempUser))
 
-        if (!tempUser || !tempUser.userId) {
+        if (!tempUser || !tempUser.username) {
             console.error("Chybi ID uživatele nebo tempUser!");
             return;
         }
@@ -86,7 +86,7 @@ function App() {
         try {
             console.log("Odesílám data do backendu...", tempUser);
 
-            const response = await fetch(`http://localhost:8080/api/users/${tempUser.userId}`, {
+            const response = await fetch(`http://localhost:8080/api/users/${tempUser.username}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(tempUser),

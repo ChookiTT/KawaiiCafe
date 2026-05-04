@@ -5,8 +5,6 @@ import type {MenuItem} from "./MenuItem.tsx";
 export interface OrderItem{
     item:MenuItem
     qty: number;
-
-
 }
 export interface OrderingInterface {
 

@@ -26,10 +26,8 @@ const Ordering: React.FC<OrderingProps> = ({ setPage, handleSave,handleChange,se
 
         const finalOrder: OrderingInterface = {
             orderNote: note,
-            items: cartItems.map(item => ({
-                ...item,
-                qty: item.qty
-            })),
+            items: cartItems.flatMap(cartItem =>
+                Array(cartItem.qty).fill(cartItem.item)),
             orderPrice: cartItems.reduce((sum, item) => sum + (item.item.itemPrice * item.qty), 0),
             orderDate: new Date().toISOString(),
             user: currentUser,
@@ -70,17 +68,11 @@ const Ordering: React.FC<OrderingProps> = ({ setPage, handleSave,handleChange,se
                         <h2 className="logo-text">
                             Dokončení objednávky
                         </h2>
+                        <div className={'row-up'}></div>
                         <div className="profile-info">
                             <div className='individual'>
-                                <EditableRow
-                                    label={"Username:"}
-                                    id="username"
-                                    value={tempUser?.username|| ''}
-                                    isEditing={editingField === 'username'}
-                                    onEdit={() => setEditingField('username')}
-                                    onSave={() => handleSave()}
-                                    onChange={(val) => handleChange('main', 'username', val)}
-                                />
+                                <strong>Username: </strong>{tempUser?.username || ''}
+
                             </div>
                             <div className='individual'>
                                 {editingField === 'name' ? (
@@ -107,9 +99,8 @@ const Ordering: React.FC<OrderingProps> = ({ setPage, handleSave,handleChange,se
                                     <>
                                     <span className='profile-info'>
                                        <strong>
-                                           Jméno:
-                                       </strong>
-                                        {tempUser?.firstName} {tempUser?.lastName}
+                                           Jméno: </strong>
+                                         {tempUser?.firstName} {tempUser?.lastName}
                                     </span>
                                      <button className='edit-btn' onClick={() => setEditingField('name')}>
                                         <img src='/public/edit.png' alt='edit'></img>
