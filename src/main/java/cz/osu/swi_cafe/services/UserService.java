@@ -88,9 +88,9 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    public User updateUser(Long id, User userDetails) {
+    public User updateUser(String username, User userDetails) {
 
-        User existingUser = userRepository.findById(id)
+        User existingUser = userRepository.findByUsername(username)
                 .orElseThrow(() -> new RuntimeException("User neexistuje"));
 
         existingUser.setUsername(userDetails.getUsername());

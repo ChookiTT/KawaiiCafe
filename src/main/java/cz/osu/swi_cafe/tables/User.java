@@ -20,6 +20,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
     @Enumerated(EnumType.STRING)
+
     @Column(nullable = false)
     private Role role = Role.CUSTOMER;
     @Column(unique = true)

@@ -29,9 +29,9 @@ import java.util.List;
         public User loginUser(@RequestBody User loginData) {
             return userService.login(loginData.getUsername(), loginData.getPassword());
         }
-        @PutMapping("/{id}")
-        public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User user) {
-            User updated = userService.updateUser(id, user);
+        @PutMapping("/{username}")
+        public ResponseEntity<User> updateUser(@PathVariable String username, @RequestBody User user) {
+            User updated = userService.updateUser(username, user);
             return ResponseEntity.ok(updated);
         }
 }
